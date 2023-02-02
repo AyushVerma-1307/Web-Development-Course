@@ -1,0 +1,18 @@
+.box{
+    height: 100px;
+    width: 200px;
+    border: 2px solid black;
+    text-align: centre;
+    margin: 20px;
+    padding: 25px;
+    box-sizing: border-box;
+}
+#org{
+    background-color: orange;
+}
+#wht{
+    background-color: whitesmoke;
+}
+#grn{
+    background-color: green;
+}

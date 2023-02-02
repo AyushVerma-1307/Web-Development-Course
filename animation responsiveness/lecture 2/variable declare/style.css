@@ -1,0 +1,18 @@
+/* gradual change in state  */
+:root{
+    --dark-red:#98182c;
+}
+.container{
+    border:1px solid black;
+    background-color: red;
+    height: 400px;
+    width: 400;
+    background-color: var(--dark-red);
+}
+.box{
+    border: 2px solid green;
+    background-color: aqua;
+    --dark-red:#98182c;/*declare a variable*/
+    color: var(--dark-red);
+
+}
