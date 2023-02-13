@@ -1,115 +1,204 @@
-console.log('chaliye suru krte  hai')
+console.log('Chaliye shuru karte hai ');
 
-// obejct create 
-// let rectangle={
-//     length:1,
-//     breadth:2,
+//object create
+// let rectangle = {
+//     length: 1,
+//     breadth: 2,
 
 //     draw: function() {
 //         console.log('drawing rectangle');
 //     }
-// }
+// };
 
-// factory funtion 
+//factory function 
 
-// function createRectangle(len,bre){
-//     return rectangle={
-//         length:len,
-//         breadth:bre,
-    
-//         // draw: function() {
-//         //     console.log('drawing rectangle');
-//         // }
+// function createRectangle(len, bre) {
+
+//     const rectangle = {
+//         length: len,
+//         breadth:bre ,
+
 //         draw() {
 //             console.log('drawing rectangle');
 //         }
-//     };
+// //     };
+//     return rectangle;
 // }
 
-// let rectangle_1=createRectangle(5,4);
-// let rectangle_2=createRectangle(2,3);
-// let rectangle_3=createRectangle(7,9);
+// let rectangleObj1 = createRectangle(5, 4);
+// let rectangle2 = createRectangle(2,3);
+// let rectangle3 = createRectangle(7,9);
 
-// // Camelcase-> numberofstudents
-// // constructor funtion -> pascal Notation -> first letter of every letter is capital-> NumberOfStudents
-
-// function Rectangle(len,bre){
-//     this.length=len;
-//     this.breadth=bre;
-//     this.draw=function(){
+//Camelcase -> numberOfStudents
+//constructor function -> Pascal Notation -> first letter of every word is Capital -> NumberOfStudents
+//constructor function -> prop/methods -> intialise/Define
+// function Rectangle(len, bre) {
+//     this.length = len;
+//     this.breadth = bre;
+//     this.draw= function() {
 //         console.log('drawing');
 //     }
 // }
-// // obejct reaction using constructor funtion 
-// let rectangleObject=new Rectangle(4,6);
-// rectangleObject.color='yellow';
-// console.log(rectangleObject)
+
+// Rectangle.
+
+// //object creation using constrcutor function
+// let rectangleObject = new Rectangle(4,6);
+
+// rectangleObject.color = 'yellow';
+// console.log(rectangleObject);
 
 // delete rectangleObject.color;
-// console.log(rectangleObject)
+// console.log(rectangleObject);
 
-// let rectangle1=new Function(
-//     'length','breadth',
-//     `this.length=len;
-//     this.breadth=bre;
-//     this.draw=funtion(){
-//         console.log(''drawing');
-// }`); 
+// let Rectangle1 = new Function(
+//     'length', 'breadth',
+// `this.length = length;
+// this.breadth = breadth;
+// this.draw= function() {
+//     console.log('drawing');
+// }`);
 
-// let rect= new rectangle1(2,3);
+// //object creation using Rectangle1
+// let rect = new Rectangle1(2,3);
 
-// rect.length
-// console.log(rect)
+// rect.length;
 
-// let a=10;
-// let b=a;
+// console.log(rect);
+
+
+// rectangle.length;
+// rectangle.breadth;
+
+// rectangle.draw();
+
+// let rectangle1 = {
+//     length: 1,
+//     breadth: 2,
+
+//     draw: function() {
+//         console.log('drawing rectangle');
+//     }
+// };
+
+
+// let rectangle2 = {
+//     length: 1,
+//     breadth: 2,
+
+//     draw: function() {
+//         console.log('drawing rectangle');
+//     }
+// };
+
+
+// let a = 10;
+// let b = a;
 
 // a++;
-// console.log(a)
-// console.log(b)
+// console.log(a);
+// console.log(b);
 
-// let a={ value:10};
-// let b=a;
+
+// let a = { value: 10};
+// let b = a;
 
 // a.value++;
-// console.log(a.value)
-// console.log(b.value)
 
-// premitive me copy create hoti hai 
-// let a=10;
+// console.log(a.value);
+// console.log(b.value);
 
-// function inc(a){
+// let a = 10;
+
+// function inc(a) {
 //     a++;
 // }
+
 // inc(a);
+
 // console.log(a);
-// refrential me address me change hota hai 
-// let a={value:10};
-// function inc(a){
+
+// let a = {value:10 };
+
+// function inc(a) {
 //     a.value++;
 // }
+
 // inc(a);
-// console.log(a.value)
 
-// let rectangle={
-//     length:2,
-//     breadth:3
-// };
-// for(let key in rectangle){
-//     console.log(key.rectangle[key]);
-// }
+// console.log(a.value);
 
-// if('color' in rectangle){
-//     console.log('present');
-// }
-// else{
-//     console.log('absent')
-// }
-
-let src={
-    a:10,
-    b:20,
-    c:30
+let rectangle = {
+    length:2,
+    breadth:4
 };
-let dest={...src};
 
+//for-in loop 
+// for(let key in rectangle ) {
+//     //keys are reflected through key variable 
+//     //values are reflected through rectangle[key]
+//     console.log(key,rectangle[key]);
+// }
+
+//for-of loop
+// for(let key of Object.entries(rectangle)) {
+//     console.log(key);
+// }
+
+// if('length' in rectangle) {
+//     console.log('Present');
+// }
+// else {
+//     console.log('Absent');
+// }
+
+
+//object - colone #1
+// let src = {
+//     a:10,
+//     b:20,
+//     c:30
+// };
+
+// let dest = {};
+
+// for(let key in src) {
+//     dest[key] = src[key];
+// }
+
+// console.log(dest);
+
+// src.a++;
+// console.log(dest);
+
+//Object Cloning #2
+// let src = {
+//     a:10,
+//     b:20,
+//     c:30
+// };
+
+// let src2 = { value: 25};
+
+// let dest = Object.assign({}, src, src2);
+
+// console.log(dest);
+
+// src.a++;
+
+// console.log(dest);
+
+//Object Cloning #3
+// let src = {
+//     a: 10,
+//     b:20,
+//     c:30
+// };
+
+// let dest = {...src};
+
+// console.log(dest);
+
+// src.a++;
+
+// console.log(dest);
